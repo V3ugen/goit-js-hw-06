@@ -20,5 +20,5 @@ const elements = ingredients.map(option => {
   newLi.textContent = option;
   return newLi;
 }) ;
-console.log(...elements );
+
 ingredientsEl.append(...elements)
