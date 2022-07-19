@@ -14,9 +14,9 @@ function onInputBlur(event) {
   valInputEl.classList.add("invalid");
 
   if (event.target.value.length === parseInt(length)) {
-
-      valInputEl.classList.remove("invalid");
-      valInputEl.classList.add("valid");
+    valInputEl.classList.replace("invalid", "valid")
+      // valInputEl.classList.remove("invalid");
+      // valInputEl.classList.add("valid");
   }
 }
 valInputEl.addEventListener("blur", onInputBlur);

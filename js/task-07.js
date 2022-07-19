@@ -3,7 +3,11 @@
 
 const textEl = document.querySelector('#text');
 const inputFondSize = document.querySelector('#font-size-control');
-const minSize = parseInt(inputFondSize.getAttribute('min'));
-const maxSize = parseInt(inputFondSize.getAttribute('max'));
 
-console.log(maxSize);
+
+inputFondSize.addEventListener("input", handleInputRange);
+function handleInputRange(event) {
+  textEl.style.fontSize = event.currentTarget.value + "px";
+}
+
+/* ОТВЕТ НАЙДЕН НА САЙТЕ https://ru.stackoverflow.com/questions/1027201/*/
