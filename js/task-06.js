@@ -13,10 +13,15 @@ function onInputBlur(event) {
 
   valInputEl.classList.add("invalid");
 
-  if (event.target.value.length === length) {
-    valInputEl.classList.replace("invalid", "valid")
-      // valInputEl.classList.remove("invalid");
-      // valInputEl.classList.add("valid");
-  }
+  // if (event.target.value.length === length) {
+  //   valInputEl.classList.replace("invalid", "valid")
+  //     // valInputEl.classList.remove("invalid");
+  //     // valInputEl.classList.add("valid");
+  // } else {
+  //   valInputEl.classList.remove("valid");
+  // }
+  event.target.value.length === length ?
+    valInputEl.classList.replace("invalid", "valid") :
+    valInputEl.classList.remove("valid");
 }
 valInputEl.addEventListener("blur", onInputBlur);
