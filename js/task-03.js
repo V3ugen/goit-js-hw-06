@@ -21,14 +21,39 @@ const images = [
 ];
 
 const elements = images.map(option => {
+  
   const newLi = document.createElement('li');
   const newImg = document.createElement('img');
+  
   newImg.src = option.url;
   newImg.alt = option.alt;
+  newImg.width = 480;
+
   newLi.append(newImg)
+  
   return newLi;
 }); 
 const galeryEl = document.querySelector('.gallery');
 
-galeryEl.append(...elements)
+console.log(elements);
 
+
+galeryEl.append(...elements)
+galeryEl.style
+// galeryEl.insertAdjacentHTML("afterbegin", toString(elements))
+
+// const listEl = document.querySelector('.gallery');
+
+// const imagesList = images.map(image => {
+//   const imageItem = document.createElement('li');
+//   const imageObject = document.createElement('img');
+//   imageObject.src = image.url;
+//   imageObject.alt = image.alt;
+
+//   imageItem.append(imageObject);
+
+//   return imageItem;
+// });
+// console.log( ...imagesList);
+
+// listEl.insertAdjacentHTML("afterbegin", ...imagesList)
